@@ -28,7 +28,6 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <input type="text" id="gd" type="text" class="form-control">
         <footer>
             <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
         </footer>
@@ -37,20 +36,11 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="~/Scripts/bootstrap-datepicker.js"></script>
-    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
-
-    
+    <script src="~/Scripts/notify.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#gd").datepicker({
-                calendarWeeks: true
-            });
+            $.notify("Testing on notify JS", "success");
         });
     </script>
-
-
 </body>
 </html>
